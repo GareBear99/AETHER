@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AETHER Panel Theme",
+  "type": "object",
+  "required": [
+    "panelStyle",
+    "accentPalette"
+  ],
+  "properties": {
+    "panelStyle": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "type": "string"
+    },
+    "orbImage": {
+      "type": "string"
+    },
+    "knobRingImage": {
+      "type": "string"
+    },
+    "glyphAtlas": {
+      "type": "string"
+    },
+    "animationProfile": {
+      "type": "string"
+    },
+    "accentPalette": {
+      "type": "object",
+      "required": [
+        "primary",
+        "secondary",
+        "shadow",
+        "highlight"
+      ],
+      "properties": {
+        "primary": {
+          "type": "string"
+        },
+        "secondary": {
+          "type": "string"
+        },
+        "shadow": {
+          "type": "string"
+        },
+        "highlight": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

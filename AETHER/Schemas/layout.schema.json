@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AETHER Layout",
+  "type": "object",
+  "required": [
+    "canvas",
+    "controls",
+    "orb",
+    "title"
+  ],
+  "properties": {
+    "canvas": {
+      "type": "object",
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 640
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 360
+        }
+      },
+      "additionalProperties": false
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "param",
+          "x",
+          "y",
+          "style"
+        ],
+        "properties": {
+          "param": {
+            "type": "string"
+          },
+          "x": {
+            "type": "integer"
+          },
+          "y": {
+            "type": "integer"
+          },
+          "style": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "orb": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "radius"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        },
+        "radius": {
+          "type": "integer",
+          "minimum": 32
+        }
+      },
+      "additionalProperties": false
+    },
+    "title": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "align"
+      ],
+      "properties": {
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        },
+        "align": {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
